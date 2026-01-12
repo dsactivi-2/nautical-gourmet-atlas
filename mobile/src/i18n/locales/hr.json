@@ -1,0 +1,115 @@
+{
+  "common": {
+    "loading": "Učitavanje...",
+    "error": "Došlo je do greške",
+    "retry": "Pokušaj ponovo",
+    "save": "Spremi",
+    "cancel": "Odustani",
+    "delete": "Obriši",
+    "confirm": "Potvrdi",
+    "back": "Natrag",
+    "search": "Traži",
+    "noResults": "Nema rezultata",
+    "seeAll": "Vidi sve"
+  },
+  "auth": {
+    "welcome": "Dobrodošli u Nautical Gourmet Atlas",
+    "login": "Prijava",
+    "register": "Registracija",
+    "logout": "Odjava",
+    "email": "Email",
+    "password": "Lozinka",
+    "firstName": "Ime",
+    "lastName": "Prezime",
+    "country": "Država",
+    "dateOfBirth": "Datum rođenja",
+    "gender": "Spol",
+    "male": "Muški",
+    "female": "Ženski",
+    "other": "Ostalo",
+    "isNautical": "Zanimaju me nautička iskustva",
+    "continueAsGuest": "Nastavi kao gost",
+    "forgotPassword": "Zaboravljena lozinka?",
+    "noAccount": "Nemate račun?",
+    "haveAccount": "Već imate račun?",
+    "registerSuccess": "Registracija uspješna!",
+    "loginSuccess": "Prijava uspješna!",
+    "invalidCredentials": "Neispravan email ili lozinka"
+  },
+  "tabs": {
+    "map": "Karta",
+    "favorites": "Favoriti",
+    "treasures": "Blaga",
+    "settings": "Postavke"
+  },
+  "map": {
+    "searchPartners": "Pretraži partnere...",
+    "filters": "Filteri",
+    "nearMe": "Blizu mene",
+    "results": "{{count}} rezultata",
+    "showList": "Prikaži listu",
+    "premiumPartners": "Premium Partneri",
+    "openNow": "Sada otvoreno",
+    "applyFilters": "Primijeni filtere",
+    "clearFilters": "Očisti filtere"
+  },
+  "categories": {
+    "premium-partners": "Premium Partneri",
+    "nautical-foodie": "Nautički Gurman",
+    "liquid-treasures": "Tekuća Blaga",
+    "authentic-flavours": "Autentični Okusi",
+    "by-the-sea": "Uz More",
+    "places-worth-visiting": "Mjesta Vrijedna Posjeta"
+  },
+  "partner": {
+    "details": "Detalji",
+    "favorite": "Favorit",
+    "discount": "{{percent}}% Popust",
+    "premiumDiscount": "Premium Popust: {{percent}}%",
+    "showPin": "Prikaži PIN",
+    "pinWarning": "Ne dijelite ovaj PIN s drugima",
+    "markUsed": "Označi popust korištenim",
+    "openingHours": "Radno vrijeme",
+    "call": "Nazovi",
+    "website": "Web stranica",
+    "navigate": "Navigiraj",
+    "closed": "Zatvoreno"
+  },
+  "favorites": {
+    "title": "Favoriti",
+    "empty": "Još nema favorita",
+    "emptyDescription": "Počnite istraživati i spremite svoje omiljene partnere!",
+    "explore": "Istraži kartu"
+  },
+  "visits": {
+    "title": "Povijest posjeta",
+    "empty": "Još nema posjeta",
+    "discountUsed": "Popust iskorišten",
+    "discountUsedOnly": "Samo iskorišteni popusti"
+  },
+  "treasures": {
+    "title": "Blaga",
+    "wines": "Vina",
+    "traditional_dishes": "Tradicionalna jela",
+    "products": "Proizvodi",
+    "crafts_souvenirs": "Rukotvorine i suveniri",
+    "relatedPartners": "Povezani partneri"
+  },
+  "settings": {
+    "title": "Postavke",
+    "profile": "Profil",
+    "language": "Jezik",
+    "preferences": "Preferencije",
+    "nauticalExperiences": "Nautička iskustva",
+    "legal": "Pravno",
+    "termsOfService": "Uvjeti korištenja",
+    "privacyPolicy": "Politika privatnosti",
+    "about": "O aplikaciji",
+    "version": "Verzija"
+  },
+  "languages": {
+    "en": "English",
+    "hr": "Hrvatski",
+    "de": "Deutsch"
+  }
+}

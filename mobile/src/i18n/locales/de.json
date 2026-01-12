@@ -1,0 +1,115 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "confirm": "Bestätigen",
+    "back": "Zurück",
+    "search": "Suchen",
+    "noResults": "Keine Ergebnisse gefunden",
+    "seeAll": "Alle anzeigen"
+  },
+  "auth": {
+    "welcome": "Willkommen bei Nautical Gourmet Atlas",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "country": "Land",
+    "dateOfBirth": "Geburtsdatum",
+    "gender": "Geschlecht",
+    "male": "Männlich",
+    "female": "Weiblich",
+    "other": "Andere",
+    "isNautical": "Ich interessiere mich für nautische Erlebnisse",
+    "continueAsGuest": "Als Gast fortfahren",
+    "forgotPassword": "Passwort vergessen?",
+    "noAccount": "Noch kein Konto?",
+    "haveAccount": "Bereits ein Konto?",
+    "registerSuccess": "Registrierung erfolgreich!",
+    "loginSuccess": "Anmeldung erfolgreich!",
+    "invalidCredentials": "Ungültige E-Mail oder Passwort"
+  },
+  "tabs": {
+    "map": "Karte",
+    "favorites": "Favoriten",
+    "treasures": "Schätze",
+    "settings": "Einstellungen"
+  },
+  "map": {
+    "searchPartners": "Partner suchen...",
+    "filters": "Filter",
+    "nearMe": "In meiner Nähe",
+    "results": "{{count}} Ergebnisse",
+    "showList": "Liste anzeigen",
+    "premiumPartners": "Premium Partner",
+    "openNow": "Jetzt geöffnet",
+    "applyFilters": "Filter anwenden",
+    "clearFilters": "Filter löschen"
+  },
+  "categories": {
+    "premium-partners": "Premium Partner",
+    "nautical-foodie": "Nautischer Feinschmecker",
+    "liquid-treasures": "Flüssige Schätze",
+    "authentic-flavours": "Authentische Aromen",
+    "by-the-sea": "Am Meer",
+    "places-worth-visiting": "Sehenswerte Orte"
+  },
+  "partner": {
+    "details": "Details",
+    "favorite": "Favorit",
+    "discount": "{{percent}}% Rabatt",
+    "premiumDiscount": "Premium Rabatt: {{percent}}%",
+    "showPin": "PIN anzeigen",
+    "pinWarning": "Teilen Sie diesen PIN nicht mit anderen",
+    "markUsed": "Rabatt als verwendet markieren",
+    "openingHours": "Öffnungszeiten",
+    "call": "Anrufen",
+    "website": "Webseite",
+    "navigate": "Navigieren",
+    "closed": "Geschlossen"
+  },
+  "favorites": {
+    "title": "Favoriten",
+    "empty": "Noch keine Favoriten",
+    "emptyDescription": "Entdecken Sie Partner und speichern Sie Ihre Favoriten!",
+    "explore": "Karte erkunden"
+  },
+  "visits": {
+    "title": "Besuchsverlauf",
+    "empty": "Noch keine Besuche",
+    "discountUsed": "Rabatt verwendet",
+    "discountUsedOnly": "Nur verwendete Rabatte"
+  },
+  "treasures": {
+    "title": "Schätze",
+    "wines": "Weine",
+    "traditional_dishes": "Traditionelle Gerichte",
+    "products": "Produkte",
+    "crafts_souvenirs": "Kunsthandwerk & Souvenirs",
+    "relatedPartners": "Verwandte Partner"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "profile": "Profil",
+    "language": "Sprache",
+    "preferences": "Präferenzen",
+    "nauticalExperiences": "Nautische Erlebnisse",
+    "legal": "Rechtliches",
+    "termsOfService": "Nutzungsbedingungen",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "about": "Über",
+    "version": "Version"
+  },
+  "languages": {
+    "en": "English",
+    "hr": "Hrvatski",
+    "de": "Deutsch"
+  }
+}

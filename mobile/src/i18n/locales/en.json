@@ -1,0 +1,115 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "search": "Search",
+    "noResults": "No results found",
+    "seeAll": "See all"
+  },
+  "auth": {
+    "welcome": "Welcome to Nautical Gourmet Atlas",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "country": "Country",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "other": "Other",
+    "isNautical": "I'm interested in nautical experiences",
+    "continueAsGuest": "Continue as Guest",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "registerSuccess": "Registration successful!",
+    "loginSuccess": "Login successful!",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "tabs": {
+    "map": "Map",
+    "favorites": "Favorites",
+    "treasures": "Treasures",
+    "settings": "Settings"
+  },
+  "map": {
+    "searchPartners": "Search partners...",
+    "filters": "Filters",
+    "nearMe": "Near me",
+    "results": "{{count}} results",
+    "showList": "Show list",
+    "premiumPartners": "Premium Partners",
+    "openNow": "Open now",
+    "applyFilters": "Apply Filters",
+    "clearFilters": "Clear Filters"
+  },
+  "categories": {
+    "premium-partners": "Premium Partners",
+    "nautical-foodie": "Nautical Foodie",
+    "liquid-treasures": "Liquid Treasures",
+    "authentic-flavours": "Authentic Flavours",
+    "by-the-sea": "By the Sea",
+    "places-worth-visiting": "Places Worth Visiting"
+  },
+  "partner": {
+    "details": "Details",
+    "favorite": "Favorite",
+    "discount": "{{percent}}% Discount",
+    "premiumDiscount": "Premium Discount: {{percent}}%",
+    "showPin": "Show PIN",
+    "pinWarning": "Do not share this PIN with others",
+    "markUsed": "Mark discount used",
+    "openingHours": "Opening Hours",
+    "call": "Call",
+    "website": "Website",
+    "navigate": "Navigate",
+    "closed": "Closed"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "empty": "No favorites yet",
+    "emptyDescription": "Start exploring and save your favorite partners!",
+    "explore": "Explore Map"
+  },
+  "visits": {
+    "title": "Visit History",
+    "empty": "No visits yet",
+    "discountUsed": "Discount used",
+    "discountUsedOnly": "Discount used only"
+  },
+  "treasures": {
+    "title": "Treasures",
+    "wines": "Wines",
+    "traditional_dishes": "Traditional Dishes",
+    "products": "Products",
+    "crafts_souvenirs": "Crafts & Souvenirs",
+    "relatedPartners": "Related Partners"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "preferences": "Preferences",
+    "nauticalExperiences": "Nautical Experiences",
+    "legal": "Legal",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "about": "About",
+    "version": "Version"
+  },
+  "languages": {
+    "en": "English",
+    "hr": "Hrvatski",
+    "de": "Deutsch"
+  }
+}
