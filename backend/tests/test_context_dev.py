@@ -2,9 +2,12 @@ import json
 
 import httpx
 import pytest
+import pytest_asyncio
+from httpx import ASGITransport, AsyncClient
 from pydantic import ValidationError
 
 from app.api.context import get_context_client
+from app.database import get_db
 from app.main import app
 from app.models.user import User
 from app.schemas.context_dev import DomainUrlCount
@@ -245,14 +248,21 @@ async def test_client_rejects_non_json():
     assert caught.value.request_id == REQUEST_ID
 
 
-@pytest.mark.asyncio
-async def test_url_count_route_returns_example(client):
-    class StubClient:
-        async def count_urls(self, domain: str, **kwargs):
-            assert domain == "cookbook.openai.com"
-            assert kwargs["max_links"] == 150
-            return parse_domain_url_count(EXAMPLE)
+@pytest_asyncio.fixture
+async def context_api():
+    """HTTP client that does not create PostGIS tables."""
 
+    async def override_get_db():
+        yield None
+
+    app.dependency_overrides[get_db] = override_get_db
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as api:
+        yield api
+    app.dependency_overrides.clear()
+
+
+def _override_user() -> None:
     app.dependency_overrides[get_current_user] = lambda: User(
         id=1,
         email="test@example.com",
@@ -260,9 +270,20 @@ async def test_url_count_route_returns_example(client):
         first_name="Test",
         last_name="User",
     )
+
+
+@pytest.mark.asyncio
+async def test_url_count_route_returns_example(context_api):
+    class StubClient:
+        async def count_urls(self, domain: str, **kwargs):
+            assert domain == "cookbook.openai.com"
+            assert kwargs["max_links"] == 150
+            return parse_domain_url_count(EXAMPLE)
+
+    _override_user()
     app.dependency_overrides[get_context_client] = lambda: StubClient()
 
-    response = await client.get(
+    response = await context_api.get(
         "/v1/context/url-count",
         params={"domain": "cookbook.openai.com", "max_links": 150},
     )
@@ -278,8 +299,8 @@ async def test_url_count_route_returns_example(client):
 
 
 @pytest.mark.asyncio
-async def test_url_count_route_requires_auth(client):
-    response = await client.get(
+async def test_url_count_route_requires_auth(context_api):
+    response = await context_api.get(
         "/v1/context/url-count",
         params={"domain": "cookbook.openai.com"},
     )
@@ -288,17 +309,11 @@ async def test_url_count_route_requires_auth(client):
 
 
 @pytest.mark.asyncio
-async def test_url_count_route_reports_missing_key(client, monkeypatch):
+async def test_url_count_route_reports_missing_key(context_api, monkeypatch):
     monkeypatch.setattr("app.api.context.settings.CONTEXT_DEV_API_KEY", "")
-    app.dependency_overrides[get_current_user] = lambda: User(
-        id=1,
-        email="test@example.com",
-        hashed_password="hashed",
-        first_name="Test",
-        last_name="User",
-    )
+    _override_user()
 
-    response = await client.get(
+    response = await context_api.get(
         "/v1/context/url-count",
         params={"domain": "cookbook.openai.com"},
     )
@@ -308,7 +323,7 @@ async def test_url_count_route_reports_missing_key(client, monkeypatch):
 
 
 @pytest.mark.asyncio
-async def test_url_count_route_maps_upstream_error(client):
+async def test_url_count_route_maps_upstream_error(context_api):
     class FailingClient:
         async def count_urls(self, domain: str, **kwargs):
             raise ContextDevAPIError(
@@ -318,16 +333,10 @@ async def test_url_count_route_maps_upstream_error(client):
                 request_id=REQUEST_ID,
             )
 
-    app.dependency_overrides[get_current_user] = lambda: User(
-        id=1,
-        email="test@example.com",
-        hashed_password="hashed",
-        first_name="Test",
-        last_name="User",
-    )
+    _override_user()
     app.dependency_overrides[get_context_client] = lambda: FailingClient()
 
-    response = await client.get(
+    response = await context_api.get(
         "/v1/context/url-count",
         params={"domain": "cookbook.openai.com"},
     )
