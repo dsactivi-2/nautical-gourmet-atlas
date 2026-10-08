@@ -22,6 +22,10 @@ class Settings(BaseSettings):
     DEFAULT_LANGUAGE: str = "en"
     SUPPORTED_LANGUAGES: list = ["hr", "en", "de"]
 
+    # Context.dev (server-side only; never expose this key to clients)
+    CONTEXT_DEV_API_KEY: str = ""
+    CONTEXT_DEV_BASE_URL: str = "https://api.context.dev/v1"
+
     class Config:
         env_file = ".env"
 

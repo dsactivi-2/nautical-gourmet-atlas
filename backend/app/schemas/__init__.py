@@ -15,6 +15,7 @@ from app.schemas.partner import (
 from app.schemas.favorite import FavoriteCreate, FavoriteResponse
 from app.schemas.visit import VisitCreate, VisitUpdate, VisitResponse
 from app.schemas.treasure import TreasureListItem, TreasureDetail
+from app.schemas.context_dev import DomainUrlCount, KeyMetadata
 
 __all__ = [
     "UserCreate",
@@ -34,4 +35,6 @@ __all__ = [
     "VisitResponse",
     "TreasureListItem",
     "TreasureDetail",
+    "DomainUrlCount",
+    "KeyMetadata",
 ]
